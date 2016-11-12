@@ -1,0 +1,25 @@
+#!/bin/bash
+toggleVPN(){
+	NS="Wi-Fi"
+	URL=""
+	if [[ "$1" == "off" ]]
+		then
+			networksetup -setautoproxyurl $NS " "
+			networksetup -setautoproxystate $NS off
+			echo "关闭 VPN 成功"
+		else
+			networksetup -setautoproxyurl $NS $URL
+			networksetup -setautoproxystate $NS on
+			echo "开启 VPN 成功"
+		fi
+}
+
+COMPANY_WIFI="eleme"
+WIFI_INFO=`/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport -I`
+if [[ "$WIFI_INFO" == *"$COMPANY_WIFI"* ]]
+then
+	toggleVPN off
+else
+	toggleVPN on
+fi			
+

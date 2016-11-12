@@ -1,10 +1,5 @@
 #!/usr/bin/python
 
-'''
-A Copy of script at https://github.com/geekcomputers/Python/blob/master/batch_file_rename.py
-'''
-
-
 import os
 import sys
 
