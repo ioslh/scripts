@@ -1,2 +1,5 @@
-# 保存我自己的别名列表
 alias ls="ls -FG"
+alias ..="cd .."
+alias ~="cd ~"
+
+
