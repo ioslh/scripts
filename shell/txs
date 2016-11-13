@@ -3,9 +3,9 @@
 # 公司的 WiFi 自动就可以翻墙，但是家里的 WiFi 就得自己设置；
 # 这个脚本根据 WiFi 的 SSID 判断是否要设置翻墙代理（auto proxy）
 
-COMPANY_WIFI="eleme"  					# 公司的 WiFi 名包含的字段
+COMPANY_WIFI="eleme"					# 公司的 WiFi 名包含的字段
 NS="Wi-Fi"								# 网络类型
-URL="http://location/of/your/proxy/url" # 翻墙代理的地址
+URL="http://location/of/your/proxy/url"	# 翻墙代理的地址
 
 toggleVPN(){
 	if [[ "$1" == "off" ]]
